@@ -1,0 +1,125 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-mar-2018, 17:04:24
+    Author     : jesus
+*/
+/** {
+ margin: 0;
+ padding: 0;
+ }*/
+
+
+h1 {
+    color: #990590 !important;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 3px 2px white;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background: url("../img/Embarazada.jpg");
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+}
+
+button {
+    background-color: #990590; 
+    border-radius: 8px;
+    border-color: #990590;
+    color: white;
+    text-align: center;
+    font: 17px Georgia;
+    padding: 10px 15px;
+}
+
+input[type=text], input[type=password] {
+    width: 60%;
+    padding: 10px 55px;
+    margin: 5px 5px;
+    display: inline-block;
+    border: 2px solid #990590;
+    border-radius: 8px;
+    box-sizing: border-radius;
+    text-align: center;
+}
+
+li {
+    padding: 10px 15px;
+    top: 70px;
+    margin-top: 5px;
+    list-style-position: inside;
+    position: relative;
+    list-style-type:none;
+}
+
+.container {
+    padding: 10px;
+    background-color: #990590;
+    border-radius: 8px;
+    position: relative;
+    left: 38%;
+    top: 20%;
+    width: 23%;
+    height: 25%;
+}
+
+.salida {
+  position: absolute;
+  top:  20px; 
+  left: 85%;
+}
+
+.entrada {
+  position: absolute;
+  top:  340px; 
+  left: 47%;
+}
+/*.derecha {
+    margin-left: 90%;
+
+}
+
+.centro {
+    margin-top: 100px;
+    margin-left: 50%;
+
+}*/
+
+
+/*.buscador {
+    right:40%;
+    margin-left:10px;
+    shape-margin:60px;
+}
+
+.container {
+
+    width: 20px;
+    height: 10px;
+}
+
+.ingreso {
+    margin: 10%;
+    width: 35%;
+    margin-left: 32%;
+    border-radius: 10%;
+    max-width: 500px;
+    background: rgba(153, 5, 144, .6);
+    padding: 10px;
+    border: 5px solid rgba(9,0,9,0.2);
+}
+
+.trans{
+    opacity: 0.5;
+}
