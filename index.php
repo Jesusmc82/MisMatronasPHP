@@ -1,6 +1,6 @@
 <!--Display inline block-->
 <?php
-  session_start();
+  /*session_start();
 
   require 'libs/database.php';
 
@@ -18,8 +18,8 @@
     } else {
       echo '<p style="padding: 100px">Usuario o contraseña erroneos.</p>';
     }
-  }
-
+  }*/
+  echo "hola";
 ?>
 <!DOCTYPE html>
 <html>
