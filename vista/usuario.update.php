@@ -10,8 +10,11 @@
 </head>
 <body>
     <h1><a href="index.php?mod=usuario&ope=index">Usuario</a></h1>
-    <form action="index.php?mod=usuario&ope=update&idUser=<?= $id ?>" method="GET">
-        <input name="idUser" type="hidden" value="<?= $id ?>">
+    <form action="index.php" method="GET">
+        <input type="hidden" name="mod" value="usuario" />
+        <input type="hidden" name="ope" value="update" />
+        <input name="idUser" type="hidden" value="<?= $id ?>" />
+
         <label for="nom">Nombre</label>
         <input id="nom" name="nom" type="text" value="<?= $nombre ?>">
         <label for="apl">Apellidos</label>

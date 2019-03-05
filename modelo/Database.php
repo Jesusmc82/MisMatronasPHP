@@ -2,10 +2,10 @@
 	class Database
 	{
 		// Atributos
-		private $dbHost = "localhost" 	 ;
-		private $dbUser = "root"	  	 ;
-		private $dbPass = ""		  	 ;
-		private $dbName = "mismatronas"	 ;
+		private $dbHost = "eu-cdbr-west-02.cleardb.net" 	 ;
+		private $dbUser = "bffe6319859464"	  	 ;
+		private $dbPass = "dbb3040b"		  	 ;
+		private $dbName = "heroku_54bd8ecf8967fd9"	 ;
 
 		//
 		private static $prp = null	  	 ;

@@ -9,6 +9,9 @@
 
         public function index() {
             $datos= usuarios::listado();
+            //echo '<pre>';
+            //echo print_r($datos);
+            //echo '</pre>';
             require_once "vista/usuario.index.php";
         }
 
@@ -32,20 +35,24 @@
         }
 
         public function update() {
+
             $id = $_GET["idUser"]??"";
+
             if(!empty($id)):
                 
-                $usuarios = usuarios::getBoard($_GET["idUser"]);
+                $usuarios = usuarios::obtenerUsuario($id);
+                                    
                 if(isset($_GET["iden"])):
-                    $usuarios= new usuarios();
+
                     $usuarios->setdni($_GET["iden"]);
                     $usuarios->setnombre($_GET["nom"]);
                     $usuarios->setapellidos($_GET["apl"]);
                     $usuarios->setnacimiento($_GET["ncm"]);
-
                     $usuarios->update();
+                    
                     header("Location:index.php?mod=usuario&ope=index");
                 else:
+                    
                     $dni = $usuarios->getdni() ;
                     $nombre = $usuarios->getnombre() ;
                     $apellidos = $usuarios->getapellidos() ;

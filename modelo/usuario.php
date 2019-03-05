@@ -87,7 +87,7 @@
 
         public function update() {
             $db = Database::getInstance();
-            $db->query('UPDATE usuarios SET nombre , apellidos , dni , nacimiento VALUES :nombre, :apl, :iden, :ncm WHERE idUser=:idU',
+            $db->query('UPDATE usuarios SET nombre=:nom , apellidos=:apl, dni=:iden, nacimiento=:ncm WHERE idUser=:idU',
                         [":idU" => $this->idUser,
                         ":nom" => $this->nombre,
                         ":apl" => $this->apellidos,
@@ -105,11 +105,17 @@
             return $datos;
         }
 
-        public static function getBoard($id) {
+        public static function obtenerUsuario($id) {
             $db = Database::getInstance();
             $db->query('SELECT * FROM usuarios WHERE idUser=:idU;',
                         ["idU" => $id]);
 
-                        $db->getRow("usuarios");
+            $res = $db->getRow("usuarios");
+            return $res;
+        }
+
+        public function __toString() {
+
+            return print_r($this, true) ;
         }
     }
