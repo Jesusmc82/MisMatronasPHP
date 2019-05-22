@@ -5,10 +5,10 @@
 
 	$_SESSION['usuario'] = $usuario;
 
-	header("Location: ../vista/usuario.menu.php");
+	header("Location: ../vista/usuario.search.php");
 
 	if(isset($_SESSION['usuario'])){
-		header("Location: vista/usuario.menu.php");		
+		header("Location: vista/usuario.search.php");		
 	} else {
 		
 		$usuario=$_POST['login'];
