@@ -7,12 +7,9 @@
 
         }
 
-        public function index() {
-            $datos= usuarios::listado();
-            //echo '<pre>';
-            //echo print_r($datos);
-            //echo '</pre>';
-            require_once "vista/usuario.index.php";
+        public function search() {
+           $datos= usuarios::listado();
+           require_once "vista/usuario.search.php";
         }
 
         public function crear(){
@@ -31,7 +28,7 @@
 
         public function delete() {
             if(isset($_GET["idUser"])) usuarios::deleteUsuarios($_GET["idUser"]);
-            header("Location:index.php?mod=usuario&ope=index");
+            header("Location:search.php?mod=usuario&ope=search");
         }
 
         public function update() {

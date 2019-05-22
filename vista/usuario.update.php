@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Editar Usuario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/style.css">
     <script src="main.js"></script>
 </head>
 <body>
-    <h1><a href="index.php?mod=usuario&ope=index">Usuario</a></h1>
+    <h1>Editar usuarios</h1>
+    <p><a href="index.php?mod=usuario&ope=index">Usuario</a></p>
     <form action="index.php" method="GET">
         <input type="hidden" name="mod" value="usuario" />
         <input type="hidden" name="ope" value="update" />
@@ -23,7 +24,7 @@
         <input id="iden" name="iden" type="text" value="<?= $dni ?>">
         <label for="ncm">Fecha Nacimiento</label>
         <input id="ncm" name="ncm" type="date" value="<?= $nacimiento ?>">
-        <button type="sumbit">Editar</button>
+        <input type="image" src="style/img/editar.gif" width="45" height="45">
     </form>
 </body>
 </html>

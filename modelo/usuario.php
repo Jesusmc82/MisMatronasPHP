@@ -8,6 +8,8 @@
         private $apellidos;
         private $dni;
         private $nacimiento;
+        private $password;
+        private $direccion;
     
         public function setidUser($idU) {
             $this->idUser= $idU;
@@ -27,6 +29,15 @@
 
         public function setnacimiento($ncm) {
             $this->nacimiento= $ncm;
+        }
+
+        public function setpassword($psw) {
+            $this->password= $psw;
+        }
+
+
+        public function setdireccion($drc) {
+            $this->direccion= $drc;
         }
 
         public function getidUser() {
@@ -49,11 +60,21 @@
             return $this->nacimiento;
         }
 
+        public function getpassword() {
+            return $this->password;
+        }
+
+        public function getdireccion() {
+            return $this->direccion;
+        }
+
+
         public function __construct(){
 
         }
 
         public function listado() {
+
             $db = Database::getInstance();
             $db->query('SELECT * FROM usuarios;');
             $datos=[];
@@ -61,6 +82,7 @@
                 array_push($datos,$item);
             endwhile;
             return $datos;
+
         }
 
         public function agregar() {
@@ -107,7 +129,7 @@
 
         public static function obtenerUsuario($id) {
             $db = Database::getInstance();
-            $db->query('SELECT * FROM usuarios WHERE idUser=:idU;',
+            $db->query('SELECT * FROM usuarios WHERE idUser=1;',
                         ["idU" => $id]);
 
             $res = $db->getRow("usuarios");
@@ -118,4 +140,20 @@
 
             return print_r($this, true) ;
         }
+
+
+        // public function inicioSesion() {
+
+        // }
+
+        public function logout() {
+            session_start();
+
+            $_SESSION=[];
+
+            session_destroy();
+
+            // header("location:../vista/usuario.index.php");
+        }
+
     }

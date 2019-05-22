@@ -1,6 +1,6 @@
 <?php
 
-    $mod = $_GET["mod"]??"usuario";
+    $mod = $_GET["mod"]??"acceso";
     $ope = $_GET["ope"]??"index";
 
     require_once "controlador/$mod.controller.php";
@@ -12,5 +12,5 @@
     if (method_exists($cont,$ope))
         $cont->$ope();
     else
-        die("error");
+        die("[index:15] - error");
 ?>

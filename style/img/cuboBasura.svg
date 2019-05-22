@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="157.3877mm"
+   height="193.74342mm"
+   viewBox="0 0 157.3877 193.74342"
+   version="1.1"
+   id="svg3817"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="cuboBasura.svg">
+  <defs
+     id="defs3811">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 148.49999 : 1"
+       inkscape:vp_y="0 : 999.99996 : 0"
+       inkscape:vp_z="210.00001 : 148.49999 : 1"
+       inkscape:persp3d-origin="105 : 98.999996 : 1"
+       id="perspective4636" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-174.00293"
+     inkscape:cy="444.0823"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata3814">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(-29.785298,-72.58668)">
+    <g
+       id="cubo"
+       inkscape:label="cubo">
+      <text
+         id="text4628"
+         y="183.60715"
+         x="55.184521"
+         style="font-style:normal;font-weight:normal;font-size:25.39999962px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:25.39999962px;stroke-width:0.26458332"
+           y="183.60715"
+           x="55.184521"
+           id="tspan4626"
+           sodipodi:role="line">Eliminar</tspan></text>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Capa 2"
+     style="display:inline"
+     transform="translate(-29.785298,-72.58668)">
+    <g
+       id="eliminar"
+       inkscape:label="eliminar">
+      <rect
+         id="rect3819"
+         width="149.67857"
+         height="166.5043"
+         x="34.017857"
+         y="98.745705"
+         style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.1602037;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         ry="23.96653" />
+      <g
+         inkscape:label="tapa"
+         id="tapa">
+        <rect
+           style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.60126376;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4652"
+           width="155.78644"
+           height="14.633281"
+           x="30.58593"
+           y="82.192459"
+           ry="6.0476208" />
+        <rect
+           style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.36500001;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect4654"
+           width="31.75"
+           height="8.3154764"
+           x="90.215256"
+           y="73.76918"
+           ry="4.1577382" />
+      </g>
+    </g>
+  </g>
+</svg>
