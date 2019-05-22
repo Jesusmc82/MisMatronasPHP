@@ -16,9 +16,7 @@
             session_start();
             
             if($_SERVER["REQUEST_METHOD"] == "POST") {
-                echo("2");
                 if (isset($_POST["login"])){
-                    echo("3");
                     $usuario = $_POST["login"];
                     $password = $_POST["password"];
                                  
@@ -31,13 +29,11 @@
                                  ":password" =>$password]);
                 $resultado = $db->getRow();
                 if ($resultado !== false) {
-                    echo("4");
                     $_SESSION['usuario'] = $usuario;
                     require_once "vista/acceso.menu.php";
-                    // header("Location: index.php?mod=index&ope=menu");
                 }else{
-                    echo("5");
                     require_once "vista/acceso.index.php";
+                    echo "Usuario o contraseña erroneos";
                 }
             }
         }
