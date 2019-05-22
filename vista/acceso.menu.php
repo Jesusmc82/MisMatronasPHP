@@ -34,7 +34,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a class="site_title"><i class="fa fa-paw"></i> <span>Mis Matronas</span></a>
+              <a class="site_title"><img src="style/img/icon_Embarazada.ico"><span> Mis Matronas</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -50,8 +50,8 @@
                 <ul class="nav side-menu">
                   <li><a href="index.php?mod=acceso&ope=menu"><i class="fa fa-home"></i> Menu</a></li>
                   <li><a href="index.php?mod=usuario&ope=search"><i class="fa fa-user"></i> Usuarios</a></li>
-                  <li><a><i class="fa fa-desktop"></i> UI Elements <!-- <span class="fa fa-chevron-down"></span> --></a></li>
-                  <li><a><i class="fa fa-table"></i> Tables</a></li>
+                  <li><a><i class="fa fa-file-pdf-o"></i>  Historial </a></li>
+                  <li><a href="index.php?mod=usuario&ope=crear"><i class="fa fa-table"></i> Nuevo Usuario</a></li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation</a></li>
                   <li><a><i class="fa fa-clone"></i>Layouts</a></li>
                 </ul>
@@ -88,68 +88,6 @@
                     <li><a href="javascript:;">Help</a></li>
                     <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
-                </li>
-
-                
-                   <!--  <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li> -->
-                    <!-- <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li> -->
-                    <!-- <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li> -->
-                   <!--  <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li> -->
-                    <!-- <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li> -->
-              </ul>
             </nav>
           </div>
         </div>
@@ -160,7 +98,9 @@
         <div class="right_col" role="main">
             <div class="clearfix"></div>
         
+            <h1>BIENVENIDO</h1>
 
+            <button type="button" class="btn btn-success btn-large"><a href="index.php?mod=usuario&ope=search"></i> Usuarios</a></button>
     <!-- jQuery -->
     <script src="vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
