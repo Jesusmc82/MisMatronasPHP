@@ -52,21 +52,21 @@ table{
     width: 200px;
 }
 
-body {
+/*body {
     background: url("img/Embarazada.jpg") repeat-x;
     height: 100%;
     width: 100%;
     position: absolute;
     background-size: cover;
-}
+}*/
 
 .containerDos {
-    margin-top: 220px;
+    /*margin-top: 220px;
     margin-left: 800px;
     width: 300px;
-    height: 200px;
+    height: 200px;*/
     background-color: #990590;
-    border-radius: 15px;
+    /*border-radius: 15px;*/
     
 }
 
