@@ -30,9 +30,11 @@
 
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
+    <div class="containerDos">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -45,8 +47,11 @@
 
             <br/>
             <!-- menú lateral -->
+            
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div div="containerDos">  
               <div class="menu_section">
+              	
                 <h3>General</h3>
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home</a></li>
@@ -56,8 +61,9 @@
                   <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation</a></li>
                   <li><a><i class="fa fa-clone"></i> Layouts</a></li>
                 </ul>
-              </div>
+              	</div>
             </div> 
+            </div>
             <!-- fin menú lateral -->
 
             <!-- footer -->
@@ -79,6 +85,7 @@
                 <ul class="dropdown-menu dropdown-usermenu pull-right">
                 <a href="login.html"><i class="fa fa-sign-out pull-right" style="margin-right: 2px;"></i> Log Out</a>
               </div>
+            </div>
             </nav>
           </div>
         </div>
@@ -251,6 +258,63 @@
                    <div id="editor-one" class="editor-wrapper"></div>
 
                   <textarea name="descr" id="descr" style="display:none;"></textarea>
+              
+              <!-- CALENDARIO -->
+    <div class="container body">
+      <div class="main_container">
+          <div class="left_col scroll-view">
+            
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="x_panel">
+        
+
+    <div id='calendar'></div>
+
+
+    <!-- calendar modal -->
+    <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    </div>
+    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+          </div>
+          <div class="modal-body">
+
+            <div id="testmodal2" style="padding: 5px 20px;">
+              <form id="antoform2" class="form-horizontal calender" role="form">
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Title</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="title2" name="title2">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Description</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+    <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+    <!-- /calendar modal -->
+        <!-- CALENDARIO -->
     <!-- jQuery -->
     <script src="vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
