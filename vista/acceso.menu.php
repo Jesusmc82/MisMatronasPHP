@@ -83,7 +83,8 @@
         <div class="right_col" role="main">
             <div class="clearfix"></div>
         
-            <h1>BIENVENIDO <?php echo $_SESSION["usuario"]; ?></h1>
+            <h1>BIENVENIDO <?php echo $_SESSION["nom"]; ?></h1>
+            <?php date_default_timezone_set('UTC'); echo date('l jS \of F Y h:i:s A'); ?>
 
             <!--   -->
           </div>
