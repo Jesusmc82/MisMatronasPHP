@@ -83,9 +83,9 @@
         <div class="right_col" role="main">
             <div class="clearfix"></div>
         
-            <h1>BIENVENIDO <?php echo $_POST[`impresion`]; ?></h1>
+            <h1>BIENVENIDO <?php echo $_SESSION["usuario"]; ?></h1>
 
-            <!-- <button type="button" class="btn btn-success btn-large"><a href="index.php?mod=usuario&ope=search"></i> Usuarios</a></button> -->
+            <!--   -->
           </div>
     <!-- jQuery -->
     <script src="vendors/jquery/dist/jquery.min.js"></script>
