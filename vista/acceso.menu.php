@@ -55,7 +55,7 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Inicio</a></li>
                   <li><a href="index.php?mod=usuario&ope=search"><i class="fa fa-user"></i> Usuario</a></li>
-                  <li><a><i class="fa fa-edit"></i> Nuevo Usuario</a></li>
+                  <li><a href="index.php?mod=historial&ope=visual"><i class="fa fa-edit"></i> Nuevo Usuario</a></li>
                   <li><a><i class="fa fa-file-word-o"></i> Historial</a></li>
                   <li><a><i class="fa fa-calendar"></i> Citas</a></li>
                   <li><a href="index.php?mod=acceso&ope=logout"><i class="fa fa-power-off"></i> Cierre de sesi&oacuten</a></li>
@@ -83,11 +83,15 @@
         <div class="right_col" role="main">
             <div class="clearfix"></div>
         
-            <h1>BIENVENIDO <?php echo $_SESSION["nom"]; ?></h1>
-            <?php date_default_timezone_set('UTC'); echo date('l jS \of F Y h:i:s A'); ?>
-
-            <!--   -->
-          </div>
+            <h1>BIENVENIDO <?php echo $_SESSION["usuario"]; ?></h1>
+            <h2>
+                <?php
+                    setlocale(LC_ALL, 'es_ES');
+                    $fecha = strftime("%A día %d de %B de %Y");
+                    echo $fecha; echo "</br>"; echo date('H:i:s');
+                ?> 
+            </h2>
+        </div>
     <!-- jQuery -->
     <script src="vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->

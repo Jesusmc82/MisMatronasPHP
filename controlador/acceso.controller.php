@@ -19,9 +19,10 @@
                 if (isset($_POST["login"])){
                     $usuario = $_POST["login"];
                     $password = $_POST["password"];
-                                 
                 }
-             
+                
+                
+
                 $db = Database::getInstance();
              
                 $db->query("SELECT * FROM usuarios WHERE dni=:usuario AND password=md5(:password);",
@@ -30,8 +31,8 @@
                 $resultado = $db->getRow();
                 if ($resultado !== false) {
                     $_SESSION['usuario'] = $usuario;
+                    
                     require_once "vista/acceso.menu.php";
-
                 }else{
                     require_once "vista/acceso.index.php";
                     echo "Usuario o contraseña erroneos";
