@@ -152,8 +152,6 @@
             $_SESSION=[];
 
             session_destroy();
-
-            // header("location:../vista/usuario.index.php");
         }
 
     }
