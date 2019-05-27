@@ -3,86 +3,56 @@
     require_once "Database.php";
 
     class historial {
+        private $nhc;
+        private $evolucion;
         private $idUser;
-        private $nombre;
-        private $apellidos;
-        private $dni;
-        private $nacimiento;
-        private $password;
-        private $direccion;
+        private $observaciones;
     
+        public function setnhc($nhc) {
+            $this->nhc= $nhc;
+        }
+
+        public function setevolucion($evl) {
+            $this->evolucion= $evl;
+        }
+
         public function setidUser($idU) {
             $this->idUser= $idU;
         }
 
-        public function setnombre($nom) {
-            $this->nombre= $nom;
+        public function setobservaciones($obv) {
+            $this->observaciones= $obv;
         }
 
-        public function setapellidos($apl) {
-            $this->apellidos= $apl;
+        public function getnhc() {
+            return $this->nhc;
         }
 
-        public function setdni($iden) {
-            $this->dni= $iden;
-        }
-
-        public function setnacimiento($ncm) {
-            $this->nacimiento= $ncm;
-        }
-
-        public function setpassword($psw) {
-            $this->password= $psw;
-        }
-
-
-        public function setdireccion($drc) {
-            $this->direccion= $drc;
+        public function getevolucion() {
+            return $this->evolucion;
         }
 
         public function getidUser() {
             return $this->idUser;
         }
 
-        public function getnombre() {
-            return $this->nombre;
+        public function getobservaciones() {
+            return $this->observaciones;
         }
-
-        public function getapellidos() {
-            return $this->apellidos;
-        }
-
-        public function getdni() {
-            return $this->dni;
-        }
-
-        public function getnacimiento() {
-            return $this->nacimiento;
-        }
-
-        public function getpassword() {
-            return $this->password;
-        }
-
-        public function getdireccion() {
-            return $this->direccion;
-        }
-
-
+        
         public function __construct(){
 
         }
 
-        public function listado() {
-
+        public function historico() {
             $db = Database::getInstance();
-            $db->query('SELECT * FROM usuarios;');
+            $db->query('SELECT * FROM historial_clinico;');
             $datos=[];
-            while($item = $db->getRow('usuarios')):
+            while($item = $db->getRow('historial')):
                 array_push($datos,$item);
             endwhile;
             return $datos;
-
+            
         }
 
         public function agregar() {
