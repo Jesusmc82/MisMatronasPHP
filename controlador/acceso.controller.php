@@ -31,6 +31,10 @@
                 if ($resultado !== false) {
                     $_SESSION['usuario'] = $usuario;
                     require_once "vista/acceso.menu.php";
+                    $impresion= query("SELECT nombre FROM usuarios WHERE dni=:usuario;",
+                                [":usuario" => $usuario]);
+                    echo "$impresion";
+
                 }else{
                     require_once "vista/acceso.index.php";
                     echo "Usuario o contraseña erroneos";
