@@ -24,16 +24,15 @@
              
                 $db = Database::getInstance();
              
-                $db->query("SELECT * FROM usuarios WHERE dni=:usuario AND password=md5(:password);",
+                $db->query("SELECT * FROM usuarios WHERE dni=:usuario, nombre=:nom AND password=md5(:password);",
                                 [":usuario" => $usuario,
+                                 ":nom" => $nombre,
                                  ":password" =>$password]);
                 $resultado = $db->getRow();
                 if ($resultado !== false) {
                     $_SESSION['usuario'] = $usuario;
+                    $_SESSION['nom'] = $nombre;
                     require_once "vista/acceso.menu.php";
-                    $impresion= query("SELECT nombre FROM usuarios WHERE dni=:usuario;",
-                                [":usuario" => $usuario]);
-                    echo "$impresion";
 
                 }else{
                     require_once "vista/acceso.index.php";
