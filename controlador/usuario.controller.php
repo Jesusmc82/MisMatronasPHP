@@ -20,7 +20,7 @@
                 $usuarios->setapellidos($_GET["apl"]);
                 $usuarios->setnacimiento($_GET["ncm"]);
                 $usuarios->agregar();
-                header("Location:index.php?mod=usuario&ope=index");
+                header("Location:index.php?mod=usuario&ope=crear");
             else:
                 require_once "vista/usuario.crear.php";
             endif;
