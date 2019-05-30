@@ -129,7 +129,7 @@
 
         public static function obtenerUsuario($id) {
             $db = Database::getInstance();
-            $db->query('SELECT * FROM usuarios WHERE idUser=1;',
+            $db->query('SELECT * FROM usuarios WHERE idUser=:idU;',
                         ["idU" => $id]);
 
             $res = $db->getRow("usuarios");

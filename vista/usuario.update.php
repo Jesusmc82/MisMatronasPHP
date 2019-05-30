@@ -5,6 +5,8 @@
 <form action="index.php" method="GET">
     <input type="hidden" name="mod" value="usuario" />
     <input type="hidden" name="ope" value="update" />
+    <label for="nom">id</label>
+    <input name="idUser" type="text" value="<?= $id ?>" />
     <input name="idUser" type="hidden" value="<?= $id ?>" />
     <label for="nom">Nombre</label>
     <input id="nom" name="nom" type="text" value="<?= $nombre ?>">

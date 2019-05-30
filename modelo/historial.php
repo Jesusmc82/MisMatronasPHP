@@ -77,15 +77,15 @@
                         [":idU" => $id]);
         }
 
-        public function update() {
-            $db = Database::getInstance();
-            $db->query('UPDATE usuarios SET nombre=:nom , apellidos=:apl, dni=:iden, nacimiento=:ncm WHERE idUser=:idU',
-                        [":idU" => $this->idUser,
-                        ":nom" => $this->nombre,
-                        ":apl" => $this->apellidos,
-                        ":iden" => $this->dni,
-                        ":ncm" => $this->nacimiento]);
-        }
+        // public function update() {
+        //     $db = Database::getInstance();
+        //     $db->query('UPDATE usuarios SET nombre=:nom , apellidos=:apl, dni=:iden, nacimiento=:ncm WHERE idUser=:idU',
+        //                 [":idU" => $this->idUser,
+        //                 ":nom" => $this->nombre,
+        //                 ":apl" => $this->apellidos,
+        //                 ":iden" => $this->dni,
+        //                 ":ncm" => $this->nacimiento]);
+        // }
 
         public function listadovariado() {
             $db = Database::getInstance();
