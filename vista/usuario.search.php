@@ -11,7 +11,7 @@
       <th>Fecha Nacimiento</th>
       <th>Direcci&oacuten</th>
       <th>Editar</th>
-      <th>Eliminar</th>
+      <th>Historial</th>
     </tr>
   </thead>
   <tbody>
@@ -22,7 +22,7 @@
         <td><?=$item->getnacimiento()?></td>
         <td><?=$item->getdireccion()?></td>
         <td><a href="index.php?mod=usuario&ope=update&idUser=<?=$item->getIdUser();?>">Editar</a></td>
-        <td><a href="index.php?mod=usuario&ope=delete&idUser=<?=$item->getIdUser();?>">Eliminar</a></td>
+        <td><a href="index.php?mod=historial&ope=visual&idUser=<?=$item->getIdUser();?>">Historial</a></td>
       </tr>
     <?php 
       }

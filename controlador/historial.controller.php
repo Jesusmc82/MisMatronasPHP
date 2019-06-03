@@ -12,6 +12,36 @@
            require_once "vista/historial.paciente.php";
         }
 
+
+        public function historia() {
+
+            $id = $_GET["idUser"];
+
+            if(!empty($id)):
+                
+                $usuarios = usuarios::obtenerUsuario($id);
+                                    
+                if(isset($_GET["iden"])):
+                    echo $iden;
+                    $usuarios->setdni($_GET["iden"]);
+                    $usuarios->setnombre($_GET["nom"]);
+                    $usuarios->setapellidos($_GET["apl"]);
+                    $usuarios->setnacimiento($_GET["ncm"]);
+                    $usuarios->update();
+
+                    header("Location:index.php?mod=usuario&ope=search");
+                else:
+                    
+                    $dni = $usuarios->getdni() ;
+                    $nombre = $usuarios->getnombre() ;
+                    $apellidos = $usuarios->getapellidos() ;
+                    $nacimiento = $usuarios->getnacimiento() ;
+                    require_once "vista/usuario.update.php";
+                endif;
+            else:
+                header("Location:index.php?mod=usuario&ope=index");
+            endif;
+        }
         // public function crear(){
         //     if(isset($_GET["iden"])):
         //         $usuarios= new usuarios();
