@@ -62,6 +62,7 @@
             return $res;
         }
 
+<<<<<<< HEAD
         // public function historico() {
         //     $db = Database::getInstance();
         //     $db->query('SELECT * FROM historial_clinico;');
@@ -71,6 +72,16 @@
         //     endwhile;
         //     return $datos;
             
+=======
+        // public function update() {
+        //     $db = Database::getInstance();
+        //     $db->query('UPDATE usuarios SET nombre=:nom , apellidos=:apl, dni=:iden, nacimiento=:ncm WHERE idUser=:idU',
+        //                 [":idU" => $this->idUser,
+        //                 ":nom" => $this->nombre,
+        //                 ":apl" => $this->apellidos,
+        //                 ":iden" => $this->dni,
+        //                 ":ncm" => $this->nacimiento]);
+>>>>>>> 7333b08d9ca126a9b4ddd2192a56b351700f18d8
         // }
 
         // public function agregar() {
