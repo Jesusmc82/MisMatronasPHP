@@ -28,9 +28,11 @@
                 $db->query("SELECT * FROM usuarios WHERE dni=:usuario AND password=md5(:password);",
                                 [":usuario" => $usuario,
                                  ":password" =>$password]);
-                $resultado = $db->getRow();
+                $resultado = $db->getRow("usuarios");
+               // print_r($resultado) ;
+                //die();
                 if ($resultado !== false) {
-                    $_SESSION['usuario'] = $usuario;
+                    $_SESSION['usuario'] = $resultado;
                     
                     require_once "vista/acceso.menu.php";
                 }else{

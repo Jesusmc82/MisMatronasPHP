@@ -3,9 +3,11 @@
  
 
   include ('style/cuerpo.php');
+
+  $usuario = $_SESSION["usuario"] ;
 ?>
 
-<h1>BIENVENIDO <?php echo $_SESSION["usuario"]; ?></h1>
+<h1>BIENVENIDO <?php echo $usuario->getnombre(); ?></h1>
 <h2>
 	<!-- fecha en php -->
 	<?php

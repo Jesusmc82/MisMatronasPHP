@@ -58,7 +58,7 @@
             $db->query('SELECT * FROM historial WHERE idUser=:idU;',
                         ["idU" => $id]);
 
-            $res = $db->getRow("usuarios");
+            $res = $db->getRow("historia");
             return $res;
         }
 
@@ -71,6 +71,23 @@
         //     endwhile;
         //     return $datos;
             
+        // public function historico() {
+        //     $db = Database::getInstance();
+        //     $db->query('SELECT * FROM historial_clinico;');
+        //     $datos=[];
+        //     while($item = $db->getRow('historial')):
+        //         array_push($datos,$item);
+        //     endwhile;
+        //     return $datos;
+            
+        // public function update() {
+        //     $db = Database::getInstance();
+        //     $db->query('UPDATE usuarios SET nombre=:nom , apellidos=:apl, dni=:iden, nacimiento=:ncm WHERE idUser=:idU',
+        //                 [":idU" => $this->idUser,
+        //                 ":nom" => $this->nombre,
+        //                 ":apl" => $this->apellidos,
+        //                 ":iden" => $this->dni,
+        //                 ":ncm" => $this->nacimiento]);
         // }
 
         // public function agregar() {
