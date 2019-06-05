@@ -25,10 +25,12 @@
 
                 $db = Database::getInstance();
              
-                $db->query("SELECT * FROM usuarios WHERE dni=:usuario AND password=md5(:password);",
+                $db->query("SELECT * FROM usuarios WHERE dni=:usuario AND password=:password;",
                                 [":usuario" => $usuario,
-                                 ":password" =>$password]);
+                                 ":password" =>md5($password)]);
+                
                 $resultado = $db->getRow("usuarios");
+
                // print_r($resultado) ;
                 //die();
                 if ($resultado !== false) {

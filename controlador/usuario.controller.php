@@ -19,6 +19,9 @@
                 $usuarios->setnombre($_GET["nom"]);
                 $usuarios->setapellidos($_GET["apl"]);
                 $usuarios->setnacimiento($_GET["ncm"]);
+                $usuarios->settipoUser($_GET["tpu"]);
+                $usuarios->setpassword($_GET["psw"]);
+                $usuarios->settelefono($_GET["tlf"]);
                 $usuarios->agregar();
                 header("Location:index.php?mod=usuario&ope=crear");
             else:
@@ -28,7 +31,7 @@
 
         public function delete() {
             if(isset($_GET["idUser"])) usuarios::deleteUsuarios($_GET["idUser"]);
-            header("Location:search.php?mod=usuario&ope=search");
+            header("Location:index.php?mod=usuario&ope=search");
         }
 
         public function update() {

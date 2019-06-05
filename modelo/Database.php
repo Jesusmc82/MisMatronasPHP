@@ -54,11 +54,7 @@
 
 			$flg = self::$prp->execute($params) ;
 
-			if ( ($flg) && (self::$prp->rowCount() > 0) ) {
-				return true  ;
-			} else {
-				return false ;
-			}
+			return ($flg) && (self::$prp->rowCount() > 0);
 		}
 
 		//

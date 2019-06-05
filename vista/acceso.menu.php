@@ -1,25 +1,30 @@
+ <!-- incluye la cabecera de la página, el menú lateral  y el fondo del cuerpo de la página -->
 <?php
 	include ('style/menu_lateral.php');
  
 
-  include ('style/cuerpo.php');
+ 	include ('style/cuerpo.php');
 
   $usuario = $_SESSION["usuario"] ;
 ?>
-
-<h1>BIENVENIDO <?php echo $usuario->getnombre(); ?></h1>
+<!--  -->
+<!-- "strtoupper" sirve para poner en PHP todas las letras en mayúsculas -->
+<h1>BIENVENIDO <?php echo strtoupper($usuario->getnombre()); ?></h1>
 <h2>
 	<!-- fecha en php -->
 	<?php
 		setlocale(LC_ALL, 'es_ES');
 		echo "Hoy es ", utf8_encode(ucfirst(strftime("%A %d de %B de %Y")));
 	?>
+	<!---->
 	<!--reloj en javascript -->
 	<div id="clockdate">
 		<div class="clockdate-wrapper">
 			<div id="clock"></div>
 		</div>
 	</div>
+	<!---->
+	<!-- Semana en javascript -->
 	<script type="text/javascript">
 		function getWeekNumber(d) {
 			d = new Date(+d);
@@ -32,8 +37,10 @@
 		var result = getWeekNumber(new Date());
 		document.write('Estamos en la semana ' + result[1] + ' de ' + result[0]);
 	</script>
+	<!---->
 </h2>
-
+<!-- incluye el pie de página -->
 <?php
 	include ('style/footer.php');
 ?>
+<!-- -->

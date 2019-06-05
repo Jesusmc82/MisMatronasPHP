@@ -10,6 +10,7 @@
         private $nacimiento;
         private $password;
         private $direccion;
+        private $tipoUser;
     
         public function setidUser($idU) {
             $this->idUser= $idU;
@@ -40,6 +41,15 @@
             $this->direccion= $drc;
         }
 
+
+        public function settipoUser($tpu) {
+            $this->tipoUser= $tpu;
+        }
+
+        public function settelefono($tlf) {
+            $this->telefono= $tlf;
+        }
+
         public function getidUser() {
             return $this->idUser;
         }
@@ -68,6 +78,14 @@
             return $this->direccion;
         }
 
+        public function gettipoUser() {
+            return $this->tipoUser;
+        }
+
+        public function gettelefono() {
+            return $this->telefono;
+        }
+
 
         public function __construct(){
 
@@ -86,12 +104,16 @@
         }
 
         public function agregar() {
+            // $psw_cifrado=password_hash($psw, PASSWORD_DEFAULT);
             $db = Database::getInstance();
-            $db->query('INSERT INTO usuarios(nombre, apellidos, dni, nacimiento) VALUES (:nom, :apl, :iden, :ncm);',
+            $db->query('INSERT INTO usuarios(nombre, apellidos, dni, nacimiento, tipoUser, `password`, telefono) VALUES (:nom, :apl, :iden, :ncm, :tpu, :psw, :tlf);',
                         [":nom" =>$this->nombre,
                          ":apl" =>$this->apellidos,
                          ":iden" =>$this->dni,
-                         ":ncm" =>$this->nacimiento]);
+                         ":ncm" =>$this->nacimiento,
+                         ":tpu" =>$this->tipoUser,
+                         ":tlf"=>$this->telefono,
+                         ":psw_cifrado" =>$this->password]);
                     $this-> idUser - $db->getLastId();   
         }
 

@@ -19,27 +19,27 @@
 
             if(!empty($id)):
                 
-                $usuarios = usuarios::obtenerUsuario($id);
+                $historia = historia::obtenerHistoria($id);
                                     
                 if(isset($_GET["iden"])):
                     echo $iden;
-                    $usuarios->setdni($_GET["iden"]);
-                    $usuarios->setnombre($_GET["nom"]);
-                    $usuarios->setapellidos($_GET["apl"]);
-                    $usuarios->setnacimiento($_GET["ncm"]);
-                    $usuarios->update();
+                    $historia->setdni($_GET["iden"]);
+                    $historia->setnombre($_GET["nom"]);
+                    $historia->setapellidos($_GET["apl"]);
+                    $historia->setnacimiento($_GET["ncm"]);
+                    $historia->update();
 
                     header("Location:index.php?mod=usuario&ope=search");
                 else:
                     
-                    $dni = $usuarios->getdni() ;
-                    $nombre = $usuarios->getnombre() ;
-                    $apellidos = $usuarios->getapellidos() ;
-                    $nacimiento = $usuarios->getnacimiento() ;
+                    $dni = $historia->getdni() ;
+                    $nombre = $historia->getnombre() ;
+                    $apellidos = $historia->getapellidos() ;
+                    $nacimiento = $historia->getnacimiento() ;
                     require_once "vista/usuario.update.php";
                 endif;
             else:
-                header("Location:index.php?mod=usuario&ope=index");
+                header("Location:index.php?mod=historial&ope=");
             endif;
         }
         // public function crear(){

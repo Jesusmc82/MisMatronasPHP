@@ -23,6 +23,31 @@
     <input type="date" class="form-control" id="ncm" name="ncm" placeholder="Fecha Nacimiento">
     <span class="fa fa-birthday-cake form-control-feedback right" aria-hidden="true"></span>
   </div>
+  <div class="form-group">
+    <label class="control-label col-md-3 col-sm-3 col-xs-12"></label>
+    <div class="col-md-9 col-sm-9 col-xs-12">
+      <select class="form-control" id="tpu" name="tpu" placeholder="Categoria Usuario">
+          <option value="" disabled="" selected="" hidden="">Categoria Usuario</option>
+          <option value= "4">Paciente</option>
+          <option value= "3">Fisioterapeuta</option>
+          <option value= "3">Matrona</option>
+          <option value= "2">Médico</option>
+          <option value= "1">Administrador</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+    <input type="text" class="form-control has-feedback-left" id="tlf" name="tlf" placeholder="telefono" minlength="9" maxlength="9">
+    <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+  </div>
+  <!-- <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+    <input type="text" class="form-control has-feedback-left" id="tlf" name="tlf" placeholder="telefono" minlength="9" maxlength="9">
+    <span class="fa fa-credit-card form-control-feedback left" aria-hidden="true"></span>
+  </div> -->
+  <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+    <input type="password" class="form-control has-feedback-left" id="psw" placeholder="password">
+    <span class="fa fa-barcode form-control-feedback right" aria-hidden="true"></span>
+  </div>
   <!-- <div class="form-group">
     <label class="control-label col-md-3 col-sm-3 col-xs-12">Default Input</label>
     <div class="col-md-9 col-sm-9 col-xs-12">
@@ -35,12 +60,7 @@
       <input type="text" class="form-control" disabled="disabled" placeholder="Disabled Input">
     </div>
   </div>
-  <div class="form-group">
-    <label class="control-label col-md-3 col-sm-3 col-xs-12">Password</label>
-    <div class="col-md-9 col-sm-9 col-xs-12">
-      <input type="password" class="form-control" value="passwordonetwo">
-    </div>
-  </div>
+  
   <div class="form-group">
     <label class="control-label col-md-3 col-sm-3 col-xs-12">Read-Only Input</label>
     <div class="col-md-9 col-sm-9 col-xs-12">

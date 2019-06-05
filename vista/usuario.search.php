@@ -11,18 +11,19 @@
       <th>Fecha Nacimiento</th>
       <th>Direcci&oacuten</th>
       <th>Editar</th>
-      <th>Historial</th>
+      <th>Eliminar</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($datos as $item) { ?>
       <tr>
         <td><?=$item->getIdUser()?></td>
-        <td><?=$item->getdni()?></td><td><a href="index.php?mod=usuario&ope=historiaClinica&idUser=<?=$item->getIdUser();?>"><?=$item->getnombre();?> <?=$item->getapellidos()?> </a></td>
+        <td><?=$item->getdni()?></td>
+        <td><a href="index.php?mod=historial&ope=visual&idUser=<?=$item->getIdUser();?>"><?=$item->getnombre();?> <?=$item->getapellidos()?> </a></td>
         <td><?=$item->getnacimiento()?></td>
         <td><?=$item->getdireccion()?></td>
         <td><a href="index.php?mod=usuario&ope=update&idUser=<?=$item->getIdUser();?>">Editar</a></td>
-        <td><a href="index.php?mod=historial&ope=visual&idUser=<?=$item->getIdUser();?>">Historial</a></td>
+        <td><a href="index.php?mod=usuario&ope=delete&idUser=<?=$item->getIdUser();?>">Eliminar</a></td>
       </tr>
     <?php 
       }
