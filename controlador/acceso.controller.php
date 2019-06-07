@@ -31,8 +31,6 @@
                 
                 $resultado = $db->getRow("usuarios");
 
-               // print_r($resultado) ;
-                //die();
                 if ($resultado !== false) {
                     $_SESSION['usuario'] = $resultado;
                     

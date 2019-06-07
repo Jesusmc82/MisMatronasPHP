@@ -22,6 +22,8 @@
                 $usuarios->settipoUser($_GET["tpu"]);
                 $usuarios->setpassword($_GET["psw"]);
                 $usuarios->settelefono($_GET["tlf"]);
+                $usuarios->setmail($_GET["mail"]);
+                $usuarios->setdireccion($_GET["drc"]);
                 $usuarios->agregar();
                 header("Location:index.php?mod=usuario&ope=crear");
             else:
@@ -48,6 +50,8 @@
                     $usuarios->setnombre($_GET["nom"]);
                     $usuarios->setapellidos($_GET["apl"]);
                     $usuarios->setnacimiento($_GET["ncm"]);
+                    $usuarios->setdireccion($_GET["drc"]);
+                    $usuarios->settipoUser($_GET["tpu"]);
                     $usuarios->update();
 
                     header("Location:index.php?mod=usuario&ope=search");
@@ -57,6 +61,8 @@
                     $nombre = $usuarios->getnombre() ;
                     $apellidos = $usuarios->getapellidos() ;
                     $nacimiento = $usuarios->getnacimiento() ;
+                    $direccion = $usuarios->getdireccion() ;
+                    $tipoUser = $usuarios->gettipoUser() ;
                     require_once "vista/usuario.update.php";
                 endif;
             else:

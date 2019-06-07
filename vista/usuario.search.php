@@ -5,11 +5,11 @@
 <table id="datatable" class="table table-striped table-bordered">
   <thead>
     <tr>
-      <th>Id</th>
       <th>DNI</th>
       <th>Nombre y apellidos</th>
       <th>Fecha Nacimiento</th>
       <th>Direcci&oacuten</th>
+      <th>Mail</th>
       <th>Editar</th>
       <th>Eliminar</th>
     </tr>
@@ -17,11 +17,12 @@
   <tbody>
     <?php foreach ($datos as $item) { ?>
       <tr>
-        <td><?=$item->getIdUser()?></td>
+        <!-- <td><?=$item->getIdUser()?></td> -->
         <td><?=$item->getdni()?></td>
         <td><a href="index.php?mod=historial&ope=visual&idUser=<?=$item->getIdUser();?>"><?=$item->getnombre();?> <?=$item->getapellidos()?> </a></td>
         <td><?=$item->getnacimiento()?></td>
         <td><?=$item->getdireccion()?></td>
+        <td><?=$item->getmail()?></td>
         <td><a href="index.php?mod=usuario&ope=update&idUser=<?=$item->getIdUser();?>">Editar</a></td>
         <td><a href="index.php?mod=usuario&ope=delete&idUser=<?=$item->getIdUser();?>">Eliminar</a></td>
       </tr>

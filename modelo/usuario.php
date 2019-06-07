@@ -11,6 +11,7 @@
         private $password;
         private $direccion;
         private $tipoUser;
+        private $mail;
     
         public function setidUser($idU) {
             $this->idUser= $idU;
@@ -50,6 +51,10 @@
             $this->telefono= $tlf;
         }
 
+        public function setmail($mail) {
+            $this->mail= $mail;
+        }
+
         public function getidUser() {
             return $this->idUser;
         }
@@ -86,6 +91,9 @@
             return $this->telefono;
         }
 
+        public function getmail() {
+            return $this->mail;
+        }
 
         public function __construct(){
 
@@ -106,14 +114,16 @@
         public function agregar() {
             // $psw_cifrado=password_hash($psw, PASSWORD_DEFAULT);
             $db = Database::getInstance();
-            $db->query('INSERT INTO usuarios(nombre, apellidos, dni, nacimiento, tipoUser, `password`, telefono) VALUES (:nom, :apl, :iden, :ncm, :tpu, :psw, :tlf);',
+            $db->query('INSERT INTO usuarios(nombre, apellidos, dni, nacimiento, tipoUser, `password`, telefono, mail, direccion) VALUES (:nom, :apl, :iden, :ncm, :tpu, :psw, :tlf, :mail, :drc);',
                         [":nom" =>$this->nombre,
                          ":apl" =>$this->apellidos,
                          ":iden" =>$this->dni,
                          ":ncm" =>$this->nacimiento,
                          ":tpu" =>$this->tipoUser,
                          ":tlf"=>$this->telefono,
-                         ":psw_cifrado" =>$this->password]);
+                         ":mail"=>$this->mail,
+                         ":drc"=>$this->direccion,
+                         ":psw" =>$this->password]);
                     $this-> idUser - $db->getLastId();   
         }
 
@@ -131,12 +141,14 @@
 
         public function update() {
             $db = Database::getInstance();
-            $db->query('UPDATE usuarios SET nombre=:nom , apellidos=:apl, dni=:iden, nacimiento=:ncm WHERE idUser=:idU',
+            $db->query('UPDATE usuarios SET nombre=:nom , apellidos=:apl, dni=:iden, nacimiento=:ncm, direccion=:drc, tipoUser=:tpu WHERE idUser=:idU',
                         [":idU" => $this->idUser,
                         ":nom" => $this->nombre,
                         ":apl" => $this->apellidos,
                         ":iden" => $this->dni,
-                        ":ncm" => $this->nacimiento]);
+                        ":ncm" => $this->nacimiento,
+                        ":drc" => $this->direccion,
+                        ":tpu" => $this->tipoUser]);
         }
 
         public function listadovariado() {
