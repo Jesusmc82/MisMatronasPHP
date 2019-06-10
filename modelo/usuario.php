@@ -141,13 +141,15 @@
 
         public function update() {
             $db = Database::getInstance();
-            $db->query('UPDATE usuarios SET nombre=:nom , apellidos=:apl, dni=:iden, nacimiento=:ncm, direccion=:drc, tipoUser=:tpu WHERE idUser=:idU',
+            $db->query('UPDATE usuarios SET nombre=:nom , apellidos=:apl, dni=:iden, nacimiento=:ncm, direccion=:drc, tipoUser=:tpu, mail=:mail, telefono=:tlf WHERE idUser=:idU',
                         [":idU" => $this->idUser,
                         ":nom" => $this->nombre,
                         ":apl" => $this->apellidos,
                         ":iden" => $this->dni,
                         ":ncm" => $this->nacimiento,
                         ":drc" => $this->direccion,
+                        ":tlf" => $this->telefono,
+                        ":mail" => $this->mail,
                         ":tpu" => $this->tipoUser]);
         }
 

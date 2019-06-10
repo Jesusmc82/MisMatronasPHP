@@ -5,7 +5,7 @@
 
  	include ('style/cuerpo.php');
 
-  $usuario = $_SESSION["usuario"] ;
+  // $usuario = $_SESSION["usuario"] ;
 ?>
 <!--  -->
 <!-- "strtoupper" sirve para poner en PHP todas las letras en mayúsculas -->

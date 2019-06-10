@@ -2,6 +2,8 @@
     include ('style/menu_lateral.php');
     include ('style/cuerpo.php');
 ?>
+
+<h1>Editar Usuario</h1>
 <form action="index.php" method="GET">
     <input type="hidden" name="mod" value="usuario">
     <input type="hidden" name="ope" value="update">
@@ -20,11 +22,6 @@
     <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback">
         <input type="text" class="form-control has-feedback-left" id="iden" name="iden" value="<?= $dni ?>">
         <span class="fa fa-credit-card form-control-feedback left" aria-hidden="true"></span>
-    </div>
-
-    <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback">
-        <input type="text" class="form-control has-feedback-left" id="drc" name="drc" value="<?= $direccion ?>">
-        <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
     </div>
 
     <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback">
@@ -66,6 +63,7 @@
     <div class="form-group">
         <div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-5">
             <button type="submit" class="btn btn-success">Editar</button>
+            <a href="index.php"><button type="submit" class="btn btn-success">Cancelar</button></a>
         </div>
     </div>
 

@@ -52,6 +52,8 @@
                     $usuarios->setnacimiento($_GET["ncm"]);
                     $usuarios->setdireccion($_GET["drc"]);
                     $usuarios->settipoUser($_GET["tpu"]);
+                    $usuarios->settelefono($_GET["tlf"]);
+                    $usuarios->setmail($_GET["mail"]);
                     $usuarios->update();
 
                     header("Location:index.php?mod=usuario&ope=search");
@@ -63,6 +65,8 @@
                     $nacimiento = $usuarios->getnacimiento() ;
                     $direccion = $usuarios->getdireccion() ;
                     $tipoUser = $usuarios->gettipoUser() ;
+                    $telefono = $usuarios->gettelefono() ;
+                    $mail = $usuarios->getmail() ;
                     require_once "vista/usuario.update.php";
                 endif;
             else:
