@@ -1,12 +1,16 @@
+<?php 
+    require_once "head.php";
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <base href="http://mismatronas.epizy.com/aplicacion/">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="style/img/icon_Embarazada.ico">
+    <link rel="icon" href="./style/img/icon_Embarazada.ico">
     <title>Mis Matronas</title>
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -69,7 +73,6 @@
                                     <li><a href="index.php?mod=acceso&ope=menu"><i class="fa fa-home"></i> Inicio</a></li>
                                     <li><a href="index.php?mod=usuario&ope=search"><i class="fa fa-user"></i> Usuario</a></li>
                                     <li><a href="index.php?mod=usuario&ope=crear"><i class="fa fa-edit"></i> Nuevo Usuario</a></li>
-                                    <li><a href="index.php?mod=usuario&ope=update"><i class="glyphicon glyphicon-erase"></i> Editar Datos</a></li>
                                     <li><a href="index.php?mod=historial&ope=visual"><i class="fa fa-file-word-o"></i> Historial</a></li>
                                     <li><a href="index.php?mod=usuario&ope=cita"><i class="fa fa-calendar"></i> Citas</a></li>
                                     <li><a href="index.php?mod=acceso&ope=logout"><i class="fa fa-power-off"></i> Cierre de sesi&oacuten</a></li>

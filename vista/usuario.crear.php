@@ -1,12 +1,18 @@
 <?php
-  include ('style/menu_lateral.php');
- 
+  
+  session_start();
 
-  include ('style/cuerpo.php');
+  if(empty($_SESSION)) {
+    header('location: /');
+  }
+
+  require_once "includes/head.php";
+  include ('includes/menu_lateral.php');
+  include ('includes/cuerpo.php');
 ?>
 <h1>Nuevo Usuario</h1>
 
-<form class="form-horizontal form-label-left input_mask" action="index.php?mod=usuario&ope=crear" method="GET">
+<form class="form-horizontal form-label-left input_mask" action="./index.php?mod=usuario&ope=crear" method="GET">
   <input id="mod" name="mod" type="hidden" value="usuario">
   <input id="ope" name="ope" type="hidden" value="crear">
 
@@ -61,6 +67,7 @@
     <span class="fa fa-barcode form-control-feedback left" aria-hidden="true"></span>
   </div>
 
+
   <div class="form-group">
     <div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-5">
       <button type="submit" class="btn btn-success">Agregar</button>
@@ -71,5 +78,5 @@
 </form>
 
 <?php 
-  include ('style/footer.php');
+  include ('includes/footer.php');
 ?>

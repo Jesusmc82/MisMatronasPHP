@@ -1,11 +1,16 @@
  <!-- incluye la cabecera de la página, el menú lateral  y el fondo del cuerpo de la página -->
 <?php
-	include ('style/menu_lateral.php');
- 
 
- 	include ('style/cuerpo.php');
+	if(empty($_SESSION)) {
+		header('location: /');
+	}
 
-  // $usuario = $_SESSION["usuario"] ;
+	require_once "includes/head.php";
+	require_once "includes/menu_lateral.php";
+ 	include ('includes/cuerpo.php');
+
+ 	$usuario = $_SESSION["usuario"] ;
+
 ?>
 <!--  -->
 <!-- "strtoupper" sirve para poner en PHP todas las letras en mayúsculas -->
@@ -41,6 +46,6 @@
 </h2>
 <!-- incluye el pie de página -->
 <?php
-	include ('style/footer.php');
+	include ('includes/footer.php');
 ?>
 <!-- -->

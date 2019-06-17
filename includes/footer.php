@@ -1,4 +1,9 @@
+<!-- <?php  
+	// require_once "include.php";
+?>
+ -->
 <!--<footer>-->
+
 				</div>
  			</div>
 		</div>

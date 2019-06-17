@@ -1,3 +1,6 @@
+<?php
+    require_once "head.php"
+?>
 <div class="top_nav">
     <div class="nav_menu">
         <nav>

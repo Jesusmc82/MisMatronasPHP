@@ -1,6 +1,14 @@
 <?php
-    include ('style/menu_lateral.php');
-    include ('style/cuerpo.php');
+  
+  session_start();
+
+  if(empty($_SESSION)) {
+    header('location: index.php');
+  }
+  
+  require_once "includes/head.php";
+  include ('includes/menu_lateral.php');
+  include ('includes/cuerpo.php');
 ?>
 <div class="col-md-12 col-sm-12 col-xs-12">
   <div class="x_panel">
@@ -107,5 +115,5 @@
       </tbody>
     </table> -->
     <?php
-      include ('style/footer.php');
+      include ('includes/footer.php');
     ?>

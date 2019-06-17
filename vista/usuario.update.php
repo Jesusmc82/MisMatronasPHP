@@ -1,8 +1,15 @@
 <?php
-    include ('style/menu_lateral.php');
-    include ('style/cuerpo.php');
-?>
+    
+    session_start();
 
+    if(empty($_SESSION)) {
+        header('location: /');
+    }
+    
+    require_once "includes/head.php";
+    include ('includes/menu_lateral.php');
+    include ('includes/cuerpo.php');
+?>
 <h1>Editar Usuario</h1>
 <form action="index.php" method="GET">
     <input type="hidden" name="mod" value="usuario">
@@ -63,7 +70,7 @@
     <div class="form-group">
         <div class="col-md-5 col-sm-5 col-xs-12 col-md-offset-5">
             <button type="submit" class="btn btn-success">Editar</button>
-            <a href="index.php"><button type="submit" class="btn btn-success">Cancelar</button></a>
+            <button class="btn btn-primary" type="button" href="index.php">Cancel</button>
         </div>
     </div>
 
@@ -72,5 +79,5 @@
     $('#tpu').val('<?= $tipoUser ?>');
 </script>
 <?php
-    include ('style/footer.php');
+    include ('includes/footer.php');
 ?>

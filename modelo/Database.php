@@ -1,11 +1,11 @@
 <?php
 	class Database
 	{
-		// Atributos
-		private $dbHost = "eu-cdbr-west-02.cleardb.net";
-		private $dbUser = "bffe6319859464";
-		private $dbPass = "dbb3040b";
-		private $dbName = "heroku_54bd8ecf8967fd9";
+		// datos de InfinityFree
+		private $dbHost = "sql106.epizy.com";
+		private $dbUser = "epiz_24035801";
+		private $dbPass = "XQ1E5xs1u3";
+		private $dbName = "epiz_24035801_mismatronas";
 
 		//
 		private static $prp = null	  	 ;

@@ -20,11 +20,12 @@
                 $usuarios->setapellidos($_GET["apl"]);
                 $usuarios->setnacimiento($_GET["ncm"]);
                 $usuarios->settipoUser($_GET["tpu"]);
-                $usuarios->setpassword($_GET["psw"]);
+                $usuarios->setpassword(MD5($_GET["psw"]));
                 $usuarios->settelefono($_GET["tlf"]);
                 $usuarios->setmail($_GET["mail"]);
                 $usuarios->setdireccion($_GET["drc"]);
                 $usuarios->agregar();
+                echo "setpassword";
                 header("Location:index.php?mod=usuario&ope=crear");
             else:
                 require_once "vista/usuario.crear.php";
